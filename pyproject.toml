@@ -1,0 +1,23 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cityjson-test-interop"
+version = "0.1.0"
+description = "Black-box interoperability tests for CityJSON Arrow and native Parquet datasets"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+  "duckdb>=1.2",
+  "polars>=1.20",
+  "pyarrow>=18",
+  "pytest>=8.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["python/cityjson_test_interop"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["python"]

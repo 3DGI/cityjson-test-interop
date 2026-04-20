@@ -1,0 +1,11 @@
+[package]
+name = "cityjson-test-interop-rust-tools"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.93"
+
+[dependencies]
+cityjson = { path = "../../cityjson-rs" }
+cityjson-arrow = { path = "../../cityjson-arrow" }
+cityjson-json = { path = "../../cityjson-json" }
+cityjson-parquet = { path = "../../cityjson-parquet" }
